@@ -38,7 +38,7 @@
             // textBoxFirstName
             // 
             textBoxFirstName.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            textBoxFirstName.ForeColor = SystemColors.ScrollBar;
+            textBoxFirstName.ForeColor = SystemColors.WindowText;
             textBoxFirstName.Location = new Point(38, 45);
             textBoxFirstName.Name = "textBoxFirstName";
             textBoxFirstName.Size = new Size(213, 25);
@@ -47,7 +47,7 @@
             // textBoxLastName
             // 
             textBoxLastName.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 204);
-            textBoxLastName.ForeColor = SystemColors.ScrollBar;
+            textBoxLastName.ForeColor = SystemColors.WindowText;
             textBoxLastName.Location = new Point(367, 45);
             textBoxLastName.Name = "textBoxLastName";
             textBoxLastName.Size = new Size(213, 25);

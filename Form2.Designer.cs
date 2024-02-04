@@ -43,6 +43,7 @@
             labelWelcome.Size = new Size(57, 15);
             labelWelcome.TabIndex = 0;
             labelWelcome.Text = "Welcome";
+            labelWelcome.Click += labelWelcome_Click;
             // 
             // buttonAdd
             // 
@@ -96,6 +97,7 @@
             Controls.Add(labelWelcome);
             Name = "Form2";
             Text = "Form2";
+            Load += Form2_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -12,9 +12,22 @@ namespace BookLibrary
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        private string logValue;
+
+        public Form2(string login)
         {
             InitializeComponent();
+            logValue = login;
+        }
+
+        private void labelWelcome_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            labelWelcome.Text = $"Welcome {logValue}";
         }
     }
 }
