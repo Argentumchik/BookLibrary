@@ -1,6 +1,6 @@
 ﻿namespace BookLibrary
 {
-    partial class Form2
+    partial class GeneralPage
     {
         /// <summary>
         /// Required designer variable.
@@ -43,7 +43,6 @@
             labelWelcome.Size = new Size(57, 15);
             labelWelcome.TabIndex = 0;
             labelWelcome.Text = "Welcome";
-            labelWelcome.Click += labelWelcome_Click;
             // 
             // buttonAdd
             // 
@@ -54,6 +53,7 @@
             buttonAdd.TabIndex = 1;
             buttonAdd.Text = "Add a book";
             buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
             // 
             // buttonTake
             // 
@@ -64,6 +64,7 @@
             buttonTake.TabIndex = 2;
             buttonTake.Text = "Take a book";
             buttonTake.UseVisualStyleBackColor = true;
+            buttonTake.Click += buttonTake_Click;
             // 
             // buttonLibrary
             // 
@@ -74,6 +75,7 @@
             buttonLibrary.TabIndex = 3;
             buttonLibrary.Text = "Library";
             buttonLibrary.UseVisualStyleBackColor = true;
+            buttonLibrary.Click += buttonLibrary_Click;
             // 
             // buttonExit
             // 
@@ -84,8 +86,9 @@
             buttonExit.TabIndex = 4;
             buttonExit.Text = "Exit";
             buttonExit.UseVisualStyleBackColor = true;
+            buttonExit.Click += buttonExit_Click;
             // 
-            // Form2
+            // GeneralPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -95,9 +98,10 @@
             Controls.Add(buttonTake);
             Controls.Add(buttonAdd);
             Controls.Add(labelWelcome);
-            Name = "Form2";
+            Name = "GeneralPage";
             Text = "Form2";
-            Load += Form2_Load;
+            FormClosed += GeneralPage_FormClosed;
+            Load += GeneralPage_Load;
             ResumeLayout(false);
             PerformLayout();
         }

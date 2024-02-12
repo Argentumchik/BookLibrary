@@ -1,6 +1,6 @@
 ﻿namespace BookLibrary
 {
-    partial class Take_a_book
+    partial class TakeABook
     {
         /// <summary>
         /// Required designer variable.

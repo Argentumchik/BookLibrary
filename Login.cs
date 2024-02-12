@@ -1,9 +1,9 @@
 namespace BookLibrary
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
 
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -14,8 +14,9 @@ namespace BookLibrary
             {
                 string login = textBoxFirstName.Text;
 
-                Form2 form2 = new Form2(login);
+                GeneralPage form2 = new GeneralPage(login);
                 form2.Show();
+                this.Hide();
             }
         }
 

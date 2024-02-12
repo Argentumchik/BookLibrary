@@ -28,17 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             dataGridViewLibrary = new DataGridView();
+            titleDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            authorDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            genreDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            yearDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            bookBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dataGridViewLibrary).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)bookBindingSource).BeginInit();
             SuspendLayout();
             // 
             // dataGridViewLibrary
             // 
+            dataGridViewLibrary.AutoGenerateColumns = false;
             dataGridViewLibrary.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewLibrary.Location = new Point(12, 12);
+            dataGridViewLibrary.Columns.AddRange(new DataGridViewColumn[] { titleDataGridViewTextBoxColumn, authorDataGridViewTextBoxColumn, genreDataGridViewTextBoxColumn, yearDataGridViewTextBoxColumn });
+            dataGridViewLibrary.DataSource = bookBindingSource;
+            dataGridViewLibrary.Dock = DockStyle.Fill;
+            dataGridViewLibrary.Location = new Point(0, 0);
             dataGridViewLibrary.Name = "dataGridViewLibrary";
-            dataGridViewLibrary.Size = new Size(822, 426);
+            dataGridViewLibrary.Size = new Size(846, 450);
             dataGridViewLibrary.TabIndex = 0;
+            dataGridViewLibrary.CellContentClick += dataGridViewLibrary_CellContentClick;
+            // 
+            // titleDataGridViewTextBoxColumn
+            // 
+            titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
+            titleDataGridViewTextBoxColumn.HeaderText = "Title";
+            titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
+            // 
+            // authorDataGridViewTextBoxColumn
+            // 
+            authorDataGridViewTextBoxColumn.DataPropertyName = "Author";
+            authorDataGridViewTextBoxColumn.HeaderText = "Author";
+            authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
+            // 
+            // genreDataGridViewTextBoxColumn
+            // 
+            genreDataGridViewTextBoxColumn.DataPropertyName = "Genre";
+            genreDataGridViewTextBoxColumn.HeaderText = "Genre";
+            genreDataGridViewTextBoxColumn.Name = "genreDataGridViewTextBoxColumn";
+            // 
+            // yearDataGridViewTextBoxColumn
+            // 
+            yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
+            yearDataGridViewTextBoxColumn.HeaderText = "Year";
+            yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
+            // 
+            // bookBindingSource
+            // 
+            bookBindingSource.DataSource = typeof(Book);
             // 
             // Library
             // 
@@ -49,11 +89,17 @@
             Name = "Library";
             Text = "Library";
             ((System.ComponentModel.ISupportInitialize)dataGridViewLibrary).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bookBindingSource).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridViewLibrary;
+        public DataGridView dataGridViewLibrary;
+        private BindingSource bookBindingSource;
+        private DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace BookLibrary
 {
-    partial class Add_a_book
+    partial class AddABook
     {
         /// <summary>
         /// Required designer variable.
@@ -127,8 +127,9 @@
             buttonAddAdd.TabIndex = 9;
             buttonAddAdd.Text = "Add";
             buttonAddAdd.UseVisualStyleBackColor = true;
+            buttonAddAdd.Click += buttonAddAdd_Click;
             // 
-            // Add_a_book
+            // AddABook
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -143,7 +144,7 @@
             Controls.Add(textBoxAddAuthor);
             Controls.Add(textBoxAddGenre);
             Controls.Add(textBoxAddTitle);
-            Name = "Add_a_book";
+            Name = "AddABook";
             Text = "Add_a_book";
             ResumeLayout(false);
             PerformLayout();
