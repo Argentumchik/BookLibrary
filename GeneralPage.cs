@@ -12,7 +12,7 @@ namespace BookLibrary
 {
     public partial class GeneralPage : Form
     {
-
+        static Library library = Library.Instance;
         private string logValue;
         Login login1 = new Login();
         public GeneralPage(string login)
@@ -23,7 +23,7 @@ namespace BookLibrary
         }
 
         private void GeneralPage_Load(object sender, EventArgs e)
-        {
+        {   
             labelWelcome.Text = $"Welcome {logValue}";
         }
 
@@ -43,7 +43,7 @@ namespace BookLibrary
             }
             else
             {
-                Library library = Library.Instance;
+                
                 if (library != null)
                 {
                     AddABook addABook = new AddABook(library);
@@ -97,7 +97,10 @@ namespace BookLibrary
             }
             else
             {
-                Library.Instance.ShowLibrary();
+
+                library = null;
+                library = Library.Instance;
+                library.ShowLibrary();
             }
         }
 

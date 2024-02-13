@@ -35,6 +35,7 @@
             genreDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             yearDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             bookBindingSource = new BindingSource(components);
+            buttonClosed = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewLibrary).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bookBindingSource).BeginInit();
             SuspendLayout();
@@ -45,10 +46,9 @@
             dataGridViewLibrary.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewLibrary.Columns.AddRange(new DataGridViewColumn[] { titleDataGridViewTextBoxColumn, authorDataGridViewTextBoxColumn, genreDataGridViewTextBoxColumn, yearDataGridViewTextBoxColumn });
             dataGridViewLibrary.DataSource = bookBindingSource;
-            dataGridViewLibrary.Dock = DockStyle.Fill;
             dataGridViewLibrary.Location = new Point(0, 0);
             dataGridViewLibrary.Name = "dataGridViewLibrary";
-            dataGridViewLibrary.Size = new Size(846, 450);
+            dataGridViewLibrary.Size = new Size(846, 404);
             dataGridViewLibrary.TabIndex = 0;
             dataGridViewLibrary.CellContentClick += dataGridViewLibrary_CellContentClick;
             // 
@@ -80,11 +80,22 @@
             // 
             bookBindingSource.DataSource = typeof(Book);
             // 
+            // buttonClosed
+            // 
+            buttonClosed.Location = new Point(304, 410);
+            buttonClosed.Name = "buttonClosed";
+            buttonClosed.Size = new Size(226, 35);
+            buttonClosed.TabIndex = 1;
+            buttonClosed.Text = "Close";
+            buttonClosed.UseVisualStyleBackColor = true;
+            buttonClosed.Click += buttonClosed_Click;
+            // 
             // Library
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(846, 450);
+            Controls.Add(buttonClosed);
             Controls.Add(dataGridViewLibrary);
             Name = "Library";
             Text = "Library";
@@ -101,5 +112,6 @@
         private DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn genreDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
+        private Button buttonClosed;
     }
 }

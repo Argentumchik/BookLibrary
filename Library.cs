@@ -17,7 +17,7 @@ namespace BookLibrary
         {
             get
             {
-                if (instance == null)
+                if (instance == null || instance.IsDisposed)
                 {
                     instance = new Library();
                 }
@@ -25,34 +25,33 @@ namespace BookLibrary
             }
         }
 
-        List<Book> books = new List<Book>();
+        static List<Book> books = new List<Book>();
         public Library()
         {
             InitializeComponent();
-            RefreshGrid();
         }
 
         public void ShowLibrary()
         {
+            dataGridViewLibrary.DataSource = null;
+            dataGridViewLibrary.DataSource = books;
             Show();
         }
 
         public void AddBook(Book book)
         {
             books.Add(book);
-            RefreshGrid();
             MessageBox.Show("Refresh");
-        }
-
-        public void RefreshGrid()
-        {
-            dataGridViewLibrary.DataSource = null;
-            dataGridViewLibrary.DataSource = books;
         }
         private void dataGridViewLibrary_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             //AddABook addABookForm = new AddABook(this);
             //addABookForm.ShowDialog(); // Показуємо форму модально
+        }
+
+        private void buttonClosed_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }
