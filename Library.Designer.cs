@@ -50,7 +50,6 @@
             dataGridViewLibrary.Name = "dataGridViewLibrary";
             dataGridViewLibrary.Size = new Size(846, 404);
             dataGridViewLibrary.TabIndex = 0;
-            dataGridViewLibrary.CellContentClick += dataGridViewLibrary_CellContentClick;
             // 
             // titleDataGridViewTextBoxColumn
             // 

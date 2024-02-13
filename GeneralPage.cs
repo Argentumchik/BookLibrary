@@ -12,7 +12,7 @@ namespace BookLibrary
 {
     public partial class GeneralPage : Form
     {
-        static Library library = Library.Instance;
+        static Library? library = Library.Instance;
         private string logValue;
         Login login1 = new Login();
         public GeneralPage(string login)
@@ -76,8 +76,15 @@ namespace BookLibrary
             }
             else
             {
-                TakeABook take = new TakeABook();
-                take.Show();
+                if (library != null)
+                {
+                    TakeABook take = new TakeABook(library);
+                    take.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Library instance not found!");
+                }
             }
         }
 

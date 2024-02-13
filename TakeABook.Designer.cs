@@ -35,7 +35,7 @@
             labelTakeAuthor = new Label();
             labelTakeTitle = new Label();
             textBoxTakeYear = new TextBox();
-            textBoxAuthor = new TextBox();
+            textBoxTakeAuthor = new TextBox();
             textBoxTakeGenre = new TextBox();
             textBoxTakeTitle = new TextBox();
             SuspendLayout();
@@ -49,6 +49,7 @@
             buttonTakeTake.TabIndex = 19;
             buttonTakeTake.Text = "Take";
             buttonTakeTake.UseVisualStyleBackColor = true;
+            buttonTakeTake.Click += buttonTakeTake_Click;
             // 
             // buttonTakeExit
             // 
@@ -107,12 +108,12 @@
             textBoxTakeYear.Size = new Size(219, 23);
             textBoxTakeYear.TabIndex = 13;
             // 
-            // textBoxAuthor
+            // textBoxTakeAuthor
             // 
-            textBoxAuthor.Location = new Point(377, 50);
-            textBoxAuthor.Name = "textBoxAuthor";
-            textBoxAuthor.Size = new Size(219, 23);
-            textBoxAuthor.TabIndex = 12;
+            textBoxTakeAuthor.Location = new Point(377, 50);
+            textBoxTakeAuthor.Name = "textBoxTakeAuthor";
+            textBoxTakeAuthor.Size = new Size(219, 23);
+            textBoxTakeAuthor.TabIndex = 12;
             // 
             // textBoxTakeGenre
             // 
@@ -128,7 +129,7 @@
             textBoxTakeTitle.Size = new Size(219, 23);
             textBoxTakeTitle.TabIndex = 10;
             // 
-            // Take_a_book
+            // TakeABook
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -140,10 +141,10 @@
             Controls.Add(labelTakeAuthor);
             Controls.Add(labelTakeTitle);
             Controls.Add(textBoxTakeYear);
-            Controls.Add(textBoxAuthor);
+            Controls.Add(textBoxTakeAuthor);
             Controls.Add(textBoxTakeGenre);
             Controls.Add(textBoxTakeTitle);
-            Name = "Take_a_book";
+            Name = "TakeABook";
             Text = "Take_a_book";
             ResumeLayout(false);
             PerformLayout();
@@ -158,7 +159,7 @@
         private Label labelTakeAuthor;
         private Label labelTakeTitle;
         private TextBox textBoxTakeYear;
-        private TextBox textBoxAuthor;
+        private TextBox textBoxTakeAuthor;
         private TextBox textBoxTakeGenre;
         private TextBox textBoxTakeTitle;
     }

@@ -41,12 +41,30 @@ namespace BookLibrary
         public void AddBook(Book book)
         {
             books.Add(book);
-            MessageBox.Show("Refresh");
         }
-        private void dataGridViewLibrary_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        public void RemoveBook(string title, string author, string genre, string year)
         {
-            //AddABook addABookForm = new AddABook(this);
-            //addABookForm.ShowDialog(); // Показуємо форму модально
+            Book bookToRemove = null;
+
+            foreach (Book book in books)
+            {
+                if (book.Title == title && book.Author == author && book.Genre == genre && book.Year == year)
+                {
+                    bookToRemove = book;
+                    break;
+                }
+            }
+
+            if (bookToRemove != null)
+            {
+                books.Remove(bookToRemove);
+                MessageBox.Show("Book deleted successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Book not found!");
+            }
         }
 
         private void buttonClosed_Click(object sender, EventArgs e)
