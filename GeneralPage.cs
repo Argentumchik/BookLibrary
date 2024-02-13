@@ -97,7 +97,7 @@ namespace BookLibrary
             }
             else
             {
-                Library.Instance.Show();
+                Library.Instance.ShowLibrary();
             }
         }
 

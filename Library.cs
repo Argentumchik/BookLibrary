@@ -32,6 +32,11 @@ namespace BookLibrary
             RefreshGrid();
         }
 
+        public void ShowLibrary()
+        {
+            Show();
+        }
+
         public void AddBook(Book book)
         {
             books.Add(book);
